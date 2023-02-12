@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ClassWork6
 {
     /// <summary>
@@ -20,9 +23,36 @@ namespace ClassWork6
     /// </summary>
     public partial class MainWindow : Window
     {
+        OleDbConnection cn;
         public MainWindow()
         {
             InitializeComponent();
+            cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\stegarc\\Documents\\ClassWork6.accdb");
         }
+
+        private void See_Assets_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "select * from Assets";
+            OleDbCommand cmd = new OleDbCommand(query,cn);
+            cn.Open();
+
+
+            OleDbDataReader read = cmd.ExecuteReader();
+            string data = "";
+
+            int count = 0;
+            while (read.Read())
+            {
+                data += read[count].ToString() + "\n";
+                count++;
+                data += read[count].ToString() + "\n";
+            }
+           
+            dataText.Text = data;
+        }
+
+
+
+
     }
 }
