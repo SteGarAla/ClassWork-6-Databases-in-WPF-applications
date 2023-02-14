@@ -7,28 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF7B7B7B">
-        <Button x:Name="See_Assets" Content="See Assets" Click="See_Assets_Click" Margin="429,149,196,231" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.539"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBlock x:Name="assetData" TextWrapping="Wrap" Text="TextBlock" Margin="431,206,183,86" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.539"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <StackPanel Margin="82,145,523,56" Orientation="Vertical">
-            <Button x:Name="Employees" Content="See Employees" RenderTransformOrigin="0.594,-0.955" Click="Employees_Click" Height="54" Width="175">
+        <StackPanel Margin="425,149,171,118" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button x:Name="See_Assets" Content="See Assets" Click="See_Assets_Click" RenderTransformOrigin="0.5,0.5" Width="200" Height="55">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.539"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock x:Name="assetData" TextWrapping="Wrap" Text="" RenderTransformOrigin="0.5,0.5" Width="200" Height="100">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.539"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Margin="89,145,509,86" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Button x:Name="Employees" Content="See Employees" RenderTransformOrigin="0.594,-0.955" Click="Employees_Click" Width="200" Height="55">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -38,7 +40,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <TextBlock x:Name="Employee_data" TextWrapping="Wrap" Text="TextBlock" RenderTransformOrigin="0.5,0.5" Height="161" Width="195">
+            <TextBlock x:Name="Employee_data" TextWrapping="Wrap" Text="" RenderTransformOrigin="0.5,0.5" Width="200" Height="100">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
