@@ -6,9 +6,50 @@
         xmlns:local="clr-namespace:ClassWork6"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="See_Assets" Content="See Assets" HorizontalAlignment="Left" Height="52" Margin="47,98,0,0" VerticalAlignment="Top" Width="175" Click="See_Assets_Click"/>
-        <TextBlock x:Name="dataText" HorizontalAlignment="Left" Height="86" Margin="400,217,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="168"/>
+    <Grid Background="#FF7B7B7B">
+        <Button x:Name="See_Assets" Content="See Assets" Click="See_Assets_Click" Margin="429,149,196,231" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.539"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock x:Name="assetData" TextWrapping="Wrap" Text="TextBlock" Margin="431,206,183,86" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.99999999999999989" ScaleY="0.99999999999999989"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.539"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <StackPanel Margin="82,145,523,56" Orientation="Vertical">
+            <Button x:Name="Employees" Content="See Employees" RenderTransformOrigin="0.594,-0.955" Click="Employees_Click" Height="54" Width="175">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.20000000000000284"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock x:Name="Employee_data" TextWrapping="Wrap" Text="TextBlock" RenderTransformOrigin="0.5,0.5" Height="161" Width="195">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.20000000000000284"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" Margin="0,40,0,344" TextWrapping="Wrap" Text="CW6 : Databases in WPF Applications" Width="498" FontFamily="Cascadia Mono SemiBold" FontWeight="Bold" FontSize="24"/>
 
     </Grid>
 </Window>

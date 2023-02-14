@@ -33,26 +33,45 @@ namespace ClassWork6
         private void See_Assets_Click(object sender, RoutedEventArgs e)
         {
             string query = "select * from Assets";
-            OleDbCommand cmd = new OleDbCommand(query,cn);
+            OleDbCommand cmd = new OleDbCommand(query, cn);
             cn.Open();
 
 
             OleDbDataReader read = cmd.ExecuteReader();
             string data = "";
 
-            int count = 0;
             while (read.Read())
             {
-                data += read[count].ToString() + "\n";
-                count++;
-                data += read[count].ToString() + "\n";
+                for (int i = 0; i < read.FieldCount; i++)
+                {
+                    data += read[i].ToString() + " ";
+                }
+                data += ("\n");
             }
-           
-            dataText.Text = data;
+            assetData.Text = data;
+            cn.Close();
         }
 
+        private void Employees_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "select * from Employees";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+            cn.Open();
 
 
+            OleDbDataReader read = cmd.ExecuteReader();
+            string data = "";
 
+            while (read.Read())
+            {
+                for (int i = 0; i < read.FieldCount; i++)
+                {
+                    data += read[i].ToString() + " ";
+                }
+                data += ("\n");
+            }
+            Employee_data.Text = data;
+            cn.Close();
+        }
     }
 }
